@@ -22,10 +22,8 @@ public class Program {
         list.add(new Product("HD Case", 80.90));
 
         double min = 100.0;
-        //Declared Lambda expression
-        Predicate<Product> pred = p -> p.getPrice() >= min;
-
-        list.removeIf(pred);
+        //Inline Lambda expression
+        list.removeIf(p -> p.getPrice() >= min);
 
         for (Product p : list) {
             System.out.println(p);
